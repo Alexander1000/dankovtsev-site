@@ -1,0 +1,3 @@
+[submodule "beauty-framework"]
+	path = beauty-framework
+	url = git@github.com:Alexander1000/beauty-framework.git
