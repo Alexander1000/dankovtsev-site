@@ -1,0 +1,11 @@
+services:
+  Beauty\Router:
+    class: 'Beauty\Router'
+    public: true
+    arguments:
+      $basePath: '/etc/routes'
+      $schema: 'site'
+
+  Beauty\Request:
+    class: 'Beauty\Request'
+    factory: 'Beauty\Request::instance'

@@ -1,0 +1,6 @@
+services:
+  Controller\Site:
+    class: 'Controller\Site'
+    public: true
+    arguments:
+      $request: '@Beauty\Request'
