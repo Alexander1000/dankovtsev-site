@@ -1,2 +1,4 @@
 .idea
 vendor
+var/cache/di/*.php
+var/cache/di/*.meta

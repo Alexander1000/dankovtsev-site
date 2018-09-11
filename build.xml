@@ -1,0 +1,18 @@
+<project name="dankovtsev-site" basedir="." default="build">
+    <property name="env" description="Тип окружения (local, test, prod)" value="prod" />
+
+    <taskdef name="di" classname="\Phing\BuildDI" />
+    <taskdef name="bootstrap" classname="\Phing\Bootstrap"/>
+
+    <target name="bootstrap" hidden="true">
+        <bootstrap/>
+    </target>
+
+    <target name="build" hidden="false" depends="build.di" description="Building project code">
+    </target>
+
+    <target name="build.di" hidden="false" description="Building symfony di" depends="bootstrap">
+        <echo>Building and compiling di container for ${env}...</echo>
+        <di env="${env}"/>
+    </target>
+</project>
