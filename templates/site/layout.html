@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block meta_data %}{% endblock %}
+    {% block css_head %}{% endblock %}
+    {% block js_head %}{% endblock %}
+</head>
+<body>
+    <div class="main_wrap">
+        <div class="wrap_head">
+            {% block content_head %}{% endblock %}
+        </div>
+        <div class="wrap_content">
+            {% block content_body %}{% endblock %}
+        </div>
+        <div class="wrap_footer">
+            {% block content_footer %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
