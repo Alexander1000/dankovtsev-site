@@ -1,5 +1,8 @@
 # Changelog dankovtsev.pro
 
+## Added 2018-09-12
+  - Добавлена phing-task для сборки кэша роутов
+
 ## Added 2018-09-11
   - Добавлен под-модуль framework
   - Добавлены html-шаблоны
