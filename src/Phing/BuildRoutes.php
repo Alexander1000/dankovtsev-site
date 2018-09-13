@@ -12,6 +12,13 @@ class BuildRoutes extends \Task
     public function main()
     {
         $phpFiles = $this->scanDir(ROOT_PATH . '/src');
+        $length = strlen(ROOT_PATH . '/src/');
+        $phpFiles = array_map(
+            function (string $path) use ($length) {
+                return substr($path, $length);
+            },
+            $phpFiles
+        );
         var_dump($phpFiles);
     }
 
