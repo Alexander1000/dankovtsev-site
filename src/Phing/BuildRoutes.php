@@ -12,14 +12,24 @@ class BuildRoutes extends \Task
     public function main()
     {
         $phpFiles = $this->scanDir(ROOT_PATH . '/src');
+        foreach ($phpFiles as $file) {
+            $this->processFile($file);
+        }
+    }
+
+    /**
+     * @param string $path
+     */
+    private function processFile(string $path)
+    {
         $length = strlen(ROOT_PATH . '/src/');
-        $phpFiles = array_map(
-            function (string $path) use ($length) {
-                return substr($path, $length);
-            },
-            $phpFiles
-        );
-        var_dump($phpFiles);
+        $phpClass = str_replace('/', '\\', substr($path, $length, -4));
+
+        if (class_exists($phpClass)) {
+            var_dump($phpClass);
+        } else {
+            echo "Class {$phpClass} does not exists" . PHP_EOL;
+        }
     }
 
     /**
