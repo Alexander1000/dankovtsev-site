@@ -1,5 +1,8 @@
 # Changelog dankovtsev.pro
 
+## Added 2018-09-14
+  - Получение yml-файла из docComment php-класса
+
 ## Added 2018-09-12
   - Добавлена phing-task для сборки кэша роутов
 

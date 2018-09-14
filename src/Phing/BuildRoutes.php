@@ -26,10 +26,28 @@ class BuildRoutes extends \Task
         $phpClass = str_replace('/', '\\', substr($path, $length, -4));
 
         if (class_exists($phpClass)) {
-            var_dump($phpClass);
+            $refClass = new \ReflectionClass($phpClass);
+            $docComments = $refClass->getDocComment();
+            if ($docComments !== false) {
+                $this->processDocComment($docComments);
+            }
         } else {
             echo "Class {$phpClass} does not exists" . PHP_EOL;
         }
+    }
+
+    /**
+     * Разбор phpDocComment-а
+     * Поиск yml-файла
+     * @param string $docComment
+     */
+    private function processDocComment(string $docComment)
+    {
+        if (!preg_match('/@router\s([\w\/_]+\.yml)/m', $docComment, $matches)) {
+            return;
+        }
+
+        $ymlFile = $matches[1];
     }
 
     /**
