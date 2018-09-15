@@ -1,5 +1,8 @@
 # Changelog dankovtsev.pro
 
+## Added 2018-09-15
+  - Генерация кэша rout-ов
+
 ## Added 2018-09-14
   - Получение yml-файла из docComment php-класса
 
