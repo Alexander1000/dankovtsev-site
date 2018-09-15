@@ -29,7 +29,38 @@ class BuildRoutes extends \Task
             $refClass = new \ReflectionClass($phpClass);
             $docComments = $refClass->getDocComment();
             if ($docComments !== false) {
-                $this->processDocComment($docComments);
+                $ymlFile = $this->getYmlFromDocComment($docComments);
+                if ($ymlFile !== null) {
+                    if (!file_exists(ROOT_PATH . '/' . $ymlFile)) {
+                        throw new \InvalidArgumentException(
+                            sprintf('yml file "%s" not found', $ymlFile)
+                        );
+                    }
+
+                    $routes = yaml_parse_file(ROOT_PATH . '/' . $ymlFile);
+                    if ($routes === false) {
+                        throw new \InvalidArgumentException(
+                            sprintf('fail on parse yml file "%s"', $ymlFile)
+                        );
+                    }
+
+                    $cacheDirName = ROOT_PATH . $this->cache . substr(dirname($path), $length - 1);
+                    if (!file_exists($cacheDirName)) {
+                        if (!mkdir($cacheDirName, 0777, true)) {
+                            throw new \InvalidArgumentException(
+                                sprintf('fail on create directory "%s"', $cacheDirName)
+                            );
+                        }
+                    }
+                    $relativeFileName = $cacheDirName . substr($path, $length - 1);
+                    $content = var_export($routes, true);
+                    file_put_contents(
+                        ROOT_PATH . $relativeFileName,
+                        sprintf("<?php\nreturn %s;", $content)
+                    );
+                    $sourceTime = filemtime(ROOT_PATH . '/' . $ymlFile);
+                    touch(ROOT_PATH . $relativeFileName, $sourceTime);
+                }
             }
         } else {
             echo "Class {$phpClass} does not exists" . PHP_EOL;
@@ -40,14 +71,15 @@ class BuildRoutes extends \Task
      * Разбор phpDocComment-а
      * Поиск yml-файла
      * @param string $docComment
+     * @return string|null
      */
-    private function processDocComment(string $docComment)
+    private function getYmlFromDocComment(string $docComment): ?string
     {
         if (!preg_match('/@router\s([\w\/_]+\.yml)/m', $docComment, $matches)) {
-            return;
+            return null;
         }
 
-        $ymlFile = $matches[1];
+        return $matches[1];
     }
 
     /**
