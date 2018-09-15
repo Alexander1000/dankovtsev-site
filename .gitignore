@@ -2,3 +2,4 @@
 vendor
 var/cache/di/*.php
 var/cache/di/*.meta
+var/cache/routes/*.php

@@ -31,6 +31,8 @@ class BuildRoutes extends \Task
             if ($docComments !== false) {
                 $ymlFile = $this->getYmlFromDocComment($docComments);
                 if ($ymlFile !== null) {
+                    $this->log(sprintf('yml file: %s', $ymlFile));
+
                     if (!file_exists(ROOT_PATH . '/' . $ymlFile)) {
                         throw new \InvalidArgumentException(
                             sprintf('yml file "%s" not found', $ymlFile)
@@ -44,7 +46,7 @@ class BuildRoutes extends \Task
                         );
                     }
 
-                    $cacheDirName = ROOT_PATH . $this->cache . substr(dirname($path), $length - 1);
+                    $cacheDirName = ROOT_PATH . '/' . $this->cache . substr(dirname($path), $length - 1);
                     if (!file_exists($cacheDirName)) {
                         if (!mkdir($cacheDirName, 0777, true)) {
                             throw new \InvalidArgumentException(
@@ -54,12 +56,15 @@ class BuildRoutes extends \Task
                     }
                     $relativeFileName = $cacheDirName . substr($path, $length - 1);
                     $content = var_export($routes, true);
+
+                    $this->log(sprintf('cached to: %s', $relativeFileName));
+
                     file_put_contents(
-                        ROOT_PATH . $relativeFileName,
+                        $relativeFileName,
                         sprintf("<?php\nreturn %s;", $content)
                     );
                     $sourceTime = filemtime(ROOT_PATH . '/' . $ymlFile);
-                    touch(ROOT_PATH . $relativeFileName, $sourceTime);
+                    touch($relativeFileName, $sourceTime);
                 }
             }
         } else {
