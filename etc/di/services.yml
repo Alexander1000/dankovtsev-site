@@ -1,6 +1,6 @@
 services:
-  Beauty\Router:
-    class: 'Beauty\Router'
+  Router:
+    class: 'Router'
     public: true
 
   Beauty\Request:
