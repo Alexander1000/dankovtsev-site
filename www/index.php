@@ -16,8 +16,12 @@ $request = new Beauty\Request(
     $_FILES
 );
 
+/** @var Beauty\RouterInterface $router */
+$router = $container->get(Router::class);
+$router->setContainer($container);
+
 try {
-    $app->process($request)->reply();
+    $app->process($router, $request)->reply();
 } catch (Beauty\Exception\NotFound $e) {
         var_dump($e->getMessage(), $e->getFile(), $e->getLine());
     (new Controller\Errors($request))
