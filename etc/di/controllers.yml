@@ -7,3 +7,4 @@ services:
 
   Admin\Controller\Main:
     autowire: true
+    public: true
