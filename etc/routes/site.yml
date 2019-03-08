@@ -2,3 +2,8 @@ main:
   uri: /
   controller: Controller\Site
   action: index
+
+admin_area:
+  uri: /admin
+  controller: Admin\Controller\Main
+  action: index

@@ -4,3 +4,6 @@ services:
     public: true
     arguments:
       $request: '@Beauty\Request'
+
+  Admin\Controller\Main:
+    autowire: true
