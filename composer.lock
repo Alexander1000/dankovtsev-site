@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "1936c2e2e85b39e1a861bf49f929edd8",
@@ -18,7 +18,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phing/phing/phing-phing-cbe0f969e434e269af91b4160b86fe899c6e07c7-zip-b83810.tar",
                 "reference": "cbe0f969e434e269af91b4160b86fe899c6e07c7",
-                "shasum": "577c741dad4d1f28c7dbb7123faa3176be7aa827"
+                "shasum": "25c3036fb18439f686719a7e2101446a73311825"
             },
             "require": {
                 "php": ">=5.2.0",
@@ -115,7 +115,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/psr/container/psr-container-b7ce3b176482dbbc1245ebf52b181af44c2cf55f-zip-34fef8.tar",
                 "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "shasum": "5275830247c9f4b4371f2ba844af87d87c70c909"
+                "shasum": "b24d2c419dbd3d50c8c2103d075d17befc198b0b"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -167,7 +167,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/psr/http-message/psr-http-message-f6561bf28d520154e4b0ec72be95418abe6d9363-zip-7ab320.tar",
                 "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": "52630b6379cbb723c0812800bcab14e2d0b1470d"
+                "shasum": "eaff3857ccb76f4391d57802d4702daaac2cec05"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -219,7 +219,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/psr/log/psr-log-4ebe3a8bf773a19edfe0a84b6585ba3d401b724d-zip-6434e8.tar",
                 "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "shasum": "f54aac56d44cb7dfbe5673290eb682d72a8e8b13"
+                "shasum": "17f5db05a466a4abf8cb41ce62eeac8e82fb4d3b"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -268,7 +268,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/symfony/config/symfony-config-ecd917899167922086ddb3247aa43eb1c418fcb2-zip-023c0a.tar",
                 "reference": "ecd917899167922086ddb3247aa43eb1c418fcb2",
-                "shasum": "b3fbdc6e26d902178d1dc3071ee86422d231e63f"
+                "shasum": "7651d5fee70b50978f2a7f94ed90569d17982a2d"
             },
             "require": {
                 "php": "^7.1.3",
@@ -330,7 +330,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/symfony/dependency-injection/symfony-dependency-injection-f78ca49c6360c710ca8e316511e71a23b10e3bf2-zip-688b3a.tar",
                 "reference": "f78ca49c6360c710ca8e316511e71a23b10e3bf2",
-                "shasum": "358ddb8aafe19e0eec9d83686d0959a7a852bd1a"
+                "shasum": "80537dd67590254c0bd0c16b18334be27b0d2eaa"
             },
             "require": {
                 "php": "^7.1.3",
@@ -403,7 +403,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/symfony/filesystem/symfony-filesystem-760e47a4ee64b4c48f4b30017011e09d4c0f05ed-zip-8ef7bf.tar",
                 "reference": "760e47a4ee64b4c48f4b30017011e09d4c0f05ed",
-                "shasum": "e023a9009662c1fa8cdf7aba4bdfbefba65ac192"
+                "shasum": "1fc53ad754e922098a468b2a6a4296808d02d7ef"
             },
             "require": {
                 "php": "^7.1.3"
@@ -454,7 +454,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/symfony/polyfill-mbstring/symfony-polyfill-mbstring-d0cd638f4634c16d8df4508e847f14e9e43168b8-zip-940b7f.tar",
                 "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "shasum": "339eab1d5f315d9a4d445b55a5fad2f7655826cd"
+                "shasum": "55cdf2ea591ab3e9a9bd774018e4815c07306698"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -575,7 +575,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/twig/twig/twig-twig-eddb97148ad779f27e670e1e3f19fb323aedafeb-zip-5d92eb.tar",
                 "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
-                "shasum": "67eb2c5d5a8eac241db11aeeb429eaf4f51acde0"
+                "shasum": "1f50f524b7c94aed4b9faf15e2e3c6fb54bbcca4"
             },
             "require": {
                 "php": "^7.0",
@@ -652,7 +652,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/doctrine/instantiator/doctrine-instantiator-185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda-zip-b52616.tar",
                 "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "shasum": "f5e4ef079959a705d79a00bc5986d941af0fb720"
+                "shasum": "4b94b34117d5fbc1e39017ca81c4c4c2f350aaf7"
             },
             "require": {
                 "php": "^7.1"
@@ -716,7 +716,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/myclabs/deep-copy/myclabs-deep-copy-3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8-zip-1d5827.tar",
                 "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
-                "shasum": "8341b33d638a95abb0ca7319d4a8a9610446f95b"
+                "shasum": "8ecc7ec70699d692c16407fc6129c32664a47bce"
             },
             "require": {
                 "php": "^7.1"
@@ -773,7 +773,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phar-io/manifest/phar-io-manifest-7761fcacf03b4d4f16e7ccb606d4879ca431fcf4-zip-16fcd4.tar",
                 "reference": "7761fcacf03b4d4f16e7ccb606d4879ca431fcf4",
-                "shasum": "77a673bad366dd3f2615df66917092d6d99620c3"
+                "shasum": "ac7f7ab2ddccef6ebdd67ba39faa6f3d25445c93"
             },
             "require": {
                 "ext-dom": "*",
@@ -831,7 +831,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phar-io/version/phar-io-version-45a2ec53a73c70ce41d55cedef9063630abaf1b6-zip-8d9b61.tar",
                 "reference": "45a2ec53a73c70ce41d55cedef9063630abaf1b6",
-                "shasum": "ba12859333a112f7e91e8f01b30d47727b5d0474"
+                "shasum": "7024f31b6e457a48beb560c1b0c9fe7afb0347df"
             },
             "require": {
                 "php": "^5.6 || ^7.0"
@@ -881,7 +881,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpdocumentor/reflection-common/phpdocumentor-reflection-common-21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6-zip-5ca449.tar",
                 "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
-                "shasum": "5a1b845c009eaca76186d9ea2c70a8c2ae84d9a6"
+                "shasum": "d1def1f9fc23da402a386dd8dc4d7ca915e3db04"
             },
             "require": {
                 "php": ">=5.5"
@@ -938,7 +938,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpdocumentor/reflection-docblock/phpdocumentor-reflection-docblock-94fd0001232e47129dd3504189fa1c7225010d08-zip-9283bc.tar",
                 "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
-                "shasum": "99c1e23ecf1da105d23e61fd8c32035d0335997d"
+                "shasum": "679f67af05071da4f0fe1df5a9dab9d600c6dd80"
             },
             "require": {
                 "php": "^7.0",
@@ -999,7 +999,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpdocumentor/type-resolver/phpdocumentor-type-resolver-9c977708995954784726e25d0cd1dddf4e65b0f7-zip-28400d.tar",
                 "reference": "9c977708995954784726e25d0cd1dddf4e65b0f7",
-                "shasum": "6319913b2650a09a5bf1f9b040730827a9eadd58"
+                "shasum": "8945a71a3686795ba62649b1f51a7cba5f01f6df"
             },
             "require": {
                 "php": "^5.5 || ^7.0",
@@ -1056,7 +1056,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpspec/prophecy/phpspec-prophecy-4ba436b55987b4bf311cb7c6ba82aa528aac0a06-zip-cb340e.tar",
                 "reference": "4ba436b55987b4bf311cb7c6ba82aa528aac0a06",
-                "shasum": "29a66d43e4f3613f9744b38684f80b3cb1016313"
+                "shasum": "1fa903397c71562c1fd15fc79911493abaac2a03"
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
@@ -1127,7 +1127,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/php-code-coverage/phpunit-php-code-coverage-865662550c384bc1db7e51d29aeda1c2c161d69a-zip-0710cd.tar",
                 "reference": "865662550c384bc1db7e51d29aeda1c2c161d69a",
-                "shasum": "7d957b6a01720837750152a033d35931d46acd16"
+                "shasum": "c789a887b406810e92d8db826823d1f2679690da"
             },
             "require": {
                 "ext-dom": "*",
@@ -1193,7 +1193,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/php-file-iterator/phpunit-php-file-iterator-cecbc684605bb0cc288828eb5d65d93d5c676d3c-zip-6cc7c7.tar",
                 "reference": "cecbc684605bb0cc288828eb5d65d93d5c676d3c",
-                "shasum": "60920aef3982aada109f98c64724cb988cd215dc"
+                "shasum": "4867b363afa89a6bfdd565cb571441cb3a20bcb1"
             },
             "require": {
                 "php": "^7.1"
@@ -1243,7 +1243,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/php-text-template/phpunit-php-text-template-31f8b717e51d9a2afca6c9f046f5d69fc27c8686-zip-c6bcbd.tar",
                 "reference": "31f8b717e51d9a2afca6c9f046f5d69fc27c8686",
-                "shasum": "067d1266c7caefa5aa6070a38eb16580687cf8b6"
+                "shasum": "99a1867ffe9c4a10739558fb1531b3a2a9c8e373"
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1287,7 +1287,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/php-timer/phpunit-php-timer-8b8454ea6958c3dee38453d3bd571e023108c91f-zip-47533e.tar",
                 "reference": "8b8454ea6958c3dee38453d3bd571e023108c91f",
-                "shasum": "27f2bfd2f084a4da4105e551de2f16e6108d670e"
+                "shasum": "b76a6ca2262622d671ca904536a62156401a70b2"
             },
             "require": {
                 "php": "^7.1"
@@ -1339,7 +1339,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/php-token-stream/phpunit-php-token-stream-21ad88bbba7c3d93530d93994e0a33cd45f02ace-zip-dbd430.tar",
                 "reference": "21ad88bbba7c3d93530d93994e0a33cd45f02ace",
-                "shasum": "12c8f59ace562b7ba119e9f77ca0ac8fa5d836a2"
+                "shasum": "3693faa86e7d2515fada5c30604ad63cef667421"
             },
             "require": {
                 "ext-tokenizer": "*",
@@ -1391,7 +1391,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/phpunit/phpunit/phpunit-phpunit-7b331efabbb628c518c408fdfcaf571156775de2-zip-1ff66c.tar",
                 "reference": "7b331efabbb628c518c408fdfcaf571156775de2",
-                "shasum": "f62cc871bc6af4ff3fdf2b4dba93b69cc8d46354"
+                "shasum": "ec78d74273271fb17f5d808feb3832200fd3a010"
             },
             "require": {
                 "doctrine/instantiator": "^1.1",
@@ -1489,7 +1489,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/code-unit-reverse-lookup/sebastian-code-unit-reverse-lookup-4419fcdb5eabb9caa61a27c7a1db532a6b55dd18-zip-2b8d33.tar",
                 "reference": "4419fcdb5eabb9caa61a27c7a1db532a6b55dd18",
-                "shasum": "c5760406a30f6025b7fc9dcd616137c925185c8f"
+                "shasum": "202271ff2232e5ac0930f8b6a487092eefd7dc55"
             },
             "require": {
                 "php": "^5.6 || ^7.0"
@@ -1537,7 +1537,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/comparator/sebastian-comparator-5de4fc177adf9bce8df98d8d141a7559d7ccf6da-zip-bbaa6e.tar",
                 "reference": "5de4fc177adf9bce8df98d8d141a7559d7ccf6da",
-                "shasum": "2babe1fd552c68f278b75d1d7de87e9d8921a36e"
+                "shasum": "1e52718342a8924bff18af564a9cdf7152655ce4"
             },
             "require": {
                 "php": "^7.1",
@@ -1609,7 +1609,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/diff/sebastian-diff-366541b989927187c4ca70490a35615d3fef2dce-zip-2beeda.tar",
                 "reference": "366541b989927187c4ca70490a35615d3fef2dce",
-                "shasum": "d06ec0e3dca3a4e88ffd5ef98e468841274aec96"
+                "shasum": "82ff14b91c92829dff85d3e5b9ed84a967aaf2b0"
             },
             "require": {
                 "php": "^7.1"
@@ -1673,7 +1673,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/environment/sebastian-environment-cd0871b3975fb7fc44d11314fd1ee20925fce4f5-zip-b6a43c.tar",
                 "reference": "cd0871b3975fb7fc44d11314fd1ee20925fce4f5",
-                "shasum": "dfda9d6184473efa79e5cb809e799df752fc1371"
+                "shasum": "35c4df1e67859591723c9936b2053ffea8e42c2e"
             },
             "require": {
                 "php": "^7.0"
@@ -1726,7 +1726,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/exporter/sebastian-exporter-234199f4528de6d12aaa58b612e98f7d36adb937-zip-ba849f.tar",
                 "reference": "234199f4528de6d12aaa58b612e98f7d36adb937",
-                "shasum": "235e8c4d2594e5a3afe4ab890d81edd4e8189117"
+                "shasum": "cb306385482cbe6f855bd0e85d4753735ff30768"
             },
             "require": {
                 "php": "^7.0",
@@ -1796,7 +1796,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/global-state/sebastian-global-state-e8ba02eed7bbbb9e59e43dedd3dddeff4a56b0c4-zip-51dbeb.tar",
                 "reference": "e8ba02eed7bbbb9e59e43dedd3dddeff4a56b0c4",
-                "shasum": "523d089a0ac34a6acfd04bbfce92095a08767c4a"
+                "shasum": "967e3447fe3c9b58c58bd620d5b5630af582ce55"
             },
             "require": {
                 "php": "^7.0"
@@ -1858,7 +1858,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/object-enumerator/sebastian-object-enumerator-7cfd9e65d11ffb5af41198476395774d4c8a84c5-zip-360ba9.tar",
                 "reference": "7cfd9e65d11ffb5af41198476395774d4c8a84c5",
-                "shasum": "94704fc1cb76fd8635d1ab6d0d7600be3b63b690"
+                "shasum": "e57d658c46922ea24646eb60a47816162f297e31"
             },
             "require": {
                 "php": "^7.0",
@@ -1913,7 +1913,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/object-reflector/sebastian-object-reflector-773f97c67f28de00d397be301821b06708fca0be-zip-56c4ab.tar",
                 "reference": "773f97c67f28de00d397be301821b06708fca0be",
-                "shasum": "3793c62ccf15ea146674d1b8ee77de225cbc1896"
+                "shasum": "ace24af3016cbc001fb8743bb96443af37c1334f"
             },
             "require": {
                 "php": "^7.0"
@@ -1966,7 +1966,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/recursion-context/sebastian-recursion-context-5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8-zip-ab6a2f.tar",
                 "reference": "5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8",
-                "shasum": "7629ebae6913de128868f1933ba27b601436cf42"
+                "shasum": "69fbb68e50bf80e11e8a81ca7cbf040f869dd68f"
             },
             "require": {
                 "php": "^7.0"
@@ -2022,7 +2022,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/resource-operations/sebastian-resource-operations-ce990bb21759f94aeafd30209e8cfcdfa8bc3f52-zip-4a3a08.tar",
                 "reference": "ce990bb21759f94aeafd30209e8cfcdfa8bc3f52",
-                "shasum": "9633270b66cedf00f5678a92b9d0935495eb4210"
+                "shasum": "bdc017c9bd87befe4ba7dba297fded4574340ba8"
             },
             "require": {
                 "php": ">=5.6.0"
@@ -2067,7 +2067,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/sebastian/version/sebastian-version-99732be0ddb3361e16ad77b68ba41efc8e979019-zip-0eee83.tar",
                 "reference": "99732be0ddb3361e16ad77b68ba41efc8e979019",
-                "shasum": "eb361f31a50a2cbc5c9fdbd09d4a18681833dd7a"
+                "shasum": "6507c388c7ab5a597881bd3aa9215e17ca488e72"
             },
             "require": {
                 "php": ">=5.6"
@@ -2113,7 +2113,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/theseer/tokenizer/theseer-tokenizer-cb2f008f3f05af2893a87208fe6a6c4985483f8b-zip-1b9019.tar",
                 "reference": "cb2f008f3f05af2893a87208fe6a6c4985483f8b",
-                "shasum": "5a7e3180e01f2105cfdb0a8866ac0d8503930e3c"
+                "shasum": "fe249a6b4d6ac1fbef3608fbcbf318c6510e68c0"
             },
             "require": {
                 "ext-dom": "*",
@@ -2156,7 +2156,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/webmozart/assert/webmozart-assert-0df1908962e7a3071564e857d86874dad1ef204a-zip-a286c0.tar",
                 "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
-                "shasum": "05b02d191bc560cb415aaee46d4028185f9497a8"
+                "shasum": "d44cce75500790d59c24bed8c0a92025eeab18d2"
             },
             "require": {
                 "php": "^5.3.3 || ^7.0"
