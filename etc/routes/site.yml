@@ -6,3 +6,4 @@ main:
 admin_area:
   uri: /admin
   route: true
+  class: Admin\Router
