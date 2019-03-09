@@ -8,6 +8,7 @@ class BuildRoutes extends \Task
 
     /**
      * @inheritdoc
+     * @throws \ReflectionException
      */
     public function main()
     {
@@ -19,6 +20,7 @@ class BuildRoutes extends \Task
 
     /**
      * @param string $path
+     * @throws \ReflectionException
      */
     private function processFile(string $path)
     {
@@ -46,15 +48,8 @@ class BuildRoutes extends \Task
                         );
                     }
 
-                    $cacheDirName = ROOT_PATH . '/' . $this->cache . substr(dirname($path), $length - 1);
-                    if (!file_exists($cacheDirName)) {
-                        if (!mkdir($cacheDirName, 0777, true)) {
-                            throw new \InvalidArgumentException(
-                                sprintf('fail on create directory "%s"', $cacheDirName)
-                            );
-                        }
-                    }
-                    $relativeFileName = $cacheDirName . substr($path, $length - 1);
+                    $fileName = str_replace('\\', '_', $phpClass);
+                    $relativeFileName = ROOT_PATH . '/' . $this->cache . '/' . $fileName . '.php';
                     $content = var_export($routes, true);
 
                     $this->log(sprintf('cached to: %s', $relativeFileName));

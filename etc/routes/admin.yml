@@ -1,0 +1,4 @@
+index:
+  uri: /
+  controller: Admin\Controller\Main
+  action: index

@@ -6,3 +6,7 @@ services:
   Beauty\Request:
     class: 'Beauty\Request'
     factory: 'Beauty\Request::instance'
+
+  Admin\Router:
+    autowire: true
+    public: true
