@@ -17,6 +17,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.1",
+    "ext-yaml": "*",
     "phing/phing": "^2.16",
     "twig/twig": "2.4.4",
 

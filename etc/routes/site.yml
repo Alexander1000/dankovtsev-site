@@ -5,5 +5,4 @@ main:
 
 admin_area:
   uri: /admin
-  controller: Admin\Controller\Main
-  action: index
+  route: true
