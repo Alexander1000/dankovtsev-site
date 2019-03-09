@@ -15,7 +15,7 @@ class Router extends \Beauty\Router
     public function getRoutes(): array
     {
         if (!$this->routes) {
-            $this->routes = include(ROOT_PATH . '/var/cache/routes/Admin/Admin/Router.php');
+            $this->routes = include(ROOT_PATH . '/var/cache/routes/Admin_Router.php');
         }
         return $this->routes;
     }
