@@ -12,3 +12,7 @@ services:
   Auth\Controller\Login:
     autowire: true
     public: true
+
+  Auth\Controller\Register:
+    autowire: true
+    public: true
