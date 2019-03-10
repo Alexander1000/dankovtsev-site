@@ -57,3 +57,21 @@ create table users_auth_visits_type (
   type_id integer,
   title text
 );
+
+create table users_auth_credentials (
+  user_id bigint not null,
+  password_hash text,
+  password_salt text,
+  create_time timestamp with timezone,
+  update_time timestamp with timezone
+);
+
+create table users_auth_deny_phones (
+  phone_id bigint not null,
+  create_time timestamp with timezone
+);
+
+create table users_auth_deny_emails (
+  email_id bigint not null,
+  create_time timestamp with timezone
+);
