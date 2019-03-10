@@ -1,6 +1,5 @@
 create table users (
   user_id bigint not null,
-  login text,
   status_id integer,
   create_time timestamp with timezone,
   update_time timestamp with timezone
@@ -9,6 +8,14 @@ create table users (
 create table users_statuses (
   status_id integer,
   title text
+);
+
+create table users_login (
+  user_id bigint not null,
+  login text,
+  status_id integer,
+  create_time timestamp with timezone,
+  update_time timestamp with timezone
 );
 
 create table users_emails (
