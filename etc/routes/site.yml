@@ -12,3 +12,8 @@ auth_login:
   uri: /login
   controller: Auth\Controller\Login
   action: login
+
+auth_register:
+  uri: /registration
+  controller: Auth\Controller\Register
+  action: register
