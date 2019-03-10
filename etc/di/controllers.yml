@@ -8,3 +8,7 @@ services:
   Admin\Controller\Main:
     autowire: true
     public: true
+
+  Auth\Controller\Login:
+    autowire: true
+    public: true

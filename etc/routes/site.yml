@@ -7,3 +7,8 @@ admin_area:
   uri: /admin
   route: true
   class: Admin\Router
+
+auth_login:
+  uri: /login
+  controller: Auth\Controller\Login
+  action: login
