@@ -5,6 +5,7 @@ create table users (
   update_time timestamp with timezone
 );
 
+-- dictionary (0 - not confirmed, 1 - confirmed, 2 - blocked)
 create table users_statuses (
   status_id integer,
   title text
@@ -27,6 +28,7 @@ create table users_emails (
   update_time timestamp with timezone
 );
 
+-- dictionary (0 - not verified, 1 - verified)
 create table users_emails_statuses (
   status_id integer,
   title text
@@ -41,6 +43,7 @@ create table users_phones (
   update_time timestamp with timezone
 );
 
+-- dictionary (0 - not verified, 1 - verified)
 create table users_phones_statuses (
   status_id integer,
   title text
