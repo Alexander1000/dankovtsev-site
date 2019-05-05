@@ -3,3 +3,5 @@ vendor
 var/cache/di/*.php
 var/cache/di/*.meta
 var/cache/routes/*.php
+3rdparty/*
+!3rdparty/.gitkeep
