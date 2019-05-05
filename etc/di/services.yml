@@ -10,3 +10,10 @@ services:
   Admin\Router:
     autowire: true
     public: true
+
+  Session\SessionServiceClient:
+    class: 'Session\SessionServiceClient'
+    public: true
+    arguments:
+      $hostname: '%service.session.hostname%'
+      $opts: '%service.session.opts%'

@@ -3,9 +3,21 @@
 namespace Admin\Controller;
 
 use Beauty;
+use Beauty\Request;
 
 class Main extends AbstractController
 {
+    /**
+     * @var \Session\SessionServiceClient
+     */
+    private $sessionService;
+
+    public function __construct(Request $request, \Session\SessionServiceClient $sessionService)
+    {
+        parent::__construct($request);
+        $this->sessionService = $sessionService;
+    }
+
     /**
      * @return Beauty\Http\ResponseInterface
      */
