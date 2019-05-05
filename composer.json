@@ -35,7 +35,9 @@
   "autoload": {
     "psr-4": {
       "": "src",
-      "Beauty\\": "beauty-framework/src"
+      "Beauty\\": "beauty-framework/src",
+      "Google\\": "3rdparty/google",
+      "Grpc\\": "3rdparty/grpc"
     }
   }
 }
