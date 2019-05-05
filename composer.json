@@ -37,7 +37,9 @@
       "": "src",
       "Beauty\\": "beauty-framework/src",
       "Google\\": "3rdparty/google",
-      "Grpc\\": "3rdparty/grpc"
+      "Grpc\\": "3rdparty/grpc",
+      "Session\\": "3rdparty/service-session-client/Session",
+      "GPBMetadata\\": "3rdparty/service-session-client/GPBMetadata"
     }
   }
 }
