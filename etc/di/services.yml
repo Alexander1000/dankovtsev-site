@@ -17,3 +17,10 @@ services:
     arguments:
       $hostname: '%service.session.hostname%'
       $opts: '%service.session.opts%'
+      $channel: '@Grpc\Channel'
+
+  Grpc\Channel:
+    class: 'Grpc\Channel'
+    arguments:
+      $target: '%service.session.hostname%'
+      $args: '%service.session.opts%'
