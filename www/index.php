@@ -29,7 +29,6 @@ try {
         ->reply();
 } catch (Throwable $e) {
     var_dump($e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
-    exit;
     (new Controller\Errors($request))
         ->internalError()
         ->reply();
