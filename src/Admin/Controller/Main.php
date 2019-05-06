@@ -23,12 +23,16 @@ class Main extends AbstractController
      */
     public function indexAction(): Beauty\Http\ResponseInterface
     {
-        $response = $this->sessionService->Get(
-            (new \Session\GetRequest())
-                ->setSessid('some-value')
-        );
-        if ($response) {
-            var_dump($response->wait());
+        try {
+            $response = $this->sessionService->Get(
+                (new \Session\GetRequest())
+                    ->setSessid('some-value')
+            );
+            if ($response) {
+                var_dump($response->wait());
+            }
+        } catch (\Throwable $e) {
+            var_dump($e);
         }
         return $this->render('index');
     }
