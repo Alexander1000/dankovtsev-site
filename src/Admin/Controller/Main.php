@@ -27,7 +27,7 @@ class Main extends AbstractController
             (new \Session\GetRequest())
                 ->setSessid('some-value')
         );
-        var_dump($response);
+        var_dump($response->wait());
         return $this->render('index');
     }
 }
