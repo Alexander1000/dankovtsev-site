@@ -1,5 +1,9 @@
 # Changelog dankovtsev.pro
 
+## 2019-05-07
+### Added
+  - Добавлены пакеты в composer `grpc/grpc` & `google/protobuf`
+
 ## 2019-05-05
 ### Changed
   - Обновлен composer
