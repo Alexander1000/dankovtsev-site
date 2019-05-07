@@ -2,8 +2,14 @@
 
 require_once __DIR__ . '/src/bootstrap.php';
 
-$container = new \DI\CachedContainer();
+$client = new \Session\SessionServiceClient(
+    '127.0.0.1:50051',
+    ['credentials' => \Grpc\ChannelCredentials::createInsecure()]
+);
 
-$controller = $container->get(\Admin\Controller\Main::class);
-
-var_dump($controller->indexAction());
+var_dump(
+    $client->Get(
+        (new \Session\GetRequest())
+            ->setSessid('35242')
+    )->wait()
+);
