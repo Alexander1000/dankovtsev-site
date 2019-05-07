@@ -7,9 +7,8 @@ $client = new \Session\SessionServiceClient(
     ['credentials' => \Grpc\ChannelCredentials::createInsecure()]
 );
 
-var_dump(
-    $client->Get(
-        (new \Session\GetRequest())
-            ->setSessid('35242')
-    )->wait()
-);
+$request = (new \Session\GetRequest())->setSessid('fa342df');
+
+$call = $client->Get($request);
+
+var_dump($call->wait());
