@@ -23,17 +23,29 @@ class Main extends AbstractController
      */
     public function indexAction(): Beauty\Http\ResponseInterface
     {
+        $context = [
+            'userId' => 0,
+            'accessToken' => '',
+            'refreshToken' => '',
+        ];
+
         try {
             $response = $this->sessionService->Get(
                 (new \Session\GetRequest())
                     ->setSessid('some-value')
             );
             if ($response) {
-                var_dump($response->wait());
+                $result = $response->wait();
+                $getResponse = $result[0];
+                if ($getResponse instanceof \Session\GetResponse) {
+                    $context['userId'] = $getResponse->getUserId();
+                    $context['accessToken'] = $getResponse->getAccessToken();
+                    $context['refreshToken'] = $getResponse->getRefreshToken();
+                }
             }
         } catch (\Throwable $e) {
             var_dump($e);
         }
-        return $this->render('index');
+        return $this->render('index', $context);
     }
 }
