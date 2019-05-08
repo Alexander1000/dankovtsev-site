@@ -12,4 +12,11 @@ $request = (new \Session\GetRequest())->setSessid('fa342df');
 
 $call = $client->Get($request);
 
-var_dump($call->wait());
+$response = $call->wait();
+
+$result = $response[0];
+
+/** @var \Session\GetResponse $result */
+var_dump($result->getAccessToken());
+var_dump($result->getRefreshToken());
+var_dump($result->getUserId());
