@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-require_once __DIR__ . '/src/bootstrap.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 $client = new \Session\SessionServiceClient(
     '127.0.0.1:50051',
