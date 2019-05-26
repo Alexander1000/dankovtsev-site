@@ -20,3 +20,13 @@ $result = $response[0];
 var_dump($result->getAccessToken());
 var_dump($result->getRefreshToken());
 var_dump($result->getUserId());
+
+// create new
+
+$request = (new \Session\CreateRequest());
+$call = $client->Create($request);
+$response = $call->wait();
+$result = $response[0];
+
+/** @var \Session\CreateResponse $result */
+var_dump($result->getSessid());

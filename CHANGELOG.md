@@ -1,5 +1,9 @@
 # Changelog dankovtsev.pro
 
+## 2019-05-26
+### Added
+  - Добавлен клиент к сервису сессий
+
 ## 2019-05-07
 ### Added
   - Добавлены пакеты в composer `grpc/grpc` & `google/protobuf`

@@ -21,6 +21,8 @@
     "phing/phing": "^2.16",
     "twig/twig": "2.4.4",
 
+    "Alexander1000/service-session-client": "0.1.0",
+
     "symfony/dependency-injection": "v4.0.4",
     "symfony/yaml": "v4.0.4",
     "symfony/config": "v4.0.4",
@@ -38,9 +40,7 @@
   "autoload": {
     "psr-4": {
       "": "src",
-      "Beauty\\": "beauty-framework/src",
-      "Session\\": "3rdparty/service-session-client/Session",
-      "GPBMetadata\\": "3rdparty/service-session-client/GPBMetadata"
+      "Beauty\\": "beauty-framework/src"
     }
   }
 }

@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f89931d9f653ab21f99b7f8f35fa4ad",
+    "content-hash": "1db05fd2bc325efc0bc887d2290b5345",
     "packages": [
+        {
+            "name": "Alexander1000/service-session-client",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Alexander1000/service-session-client.git",
+                "reference": "40a107f4b4d0c8616bcb0aa71169d7d18c083c69"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "http://packages.beauty-recommend.ru/dist/alexander1000/service-session-client/alexander1000-service-session-client-40a107f4b4d0c8616bcb0aa71169d7d18c083c69-zip-54f535.tar",
+                "reference": "40a107f4b4d0c8616bcb0aa71169d7d18c083c69",
+                "shasum": "61244a17f71733d019804fab2caed3d4043f57ee"
+            },
+            "require": {
+                "ext-json": "*",
+                "google/protobuf": "3.7.1",
+                "grpc/grpc": "1.19.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Session\\": "src/Session",
+                    "GPBMetadata\\": "src/GPBMetadata"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Alexander Dankovtsev",
+                    "email": "a.dankovtsev@mail.ru"
+                }
+            ],
+            "description": "service-session-client",
+            "support": {
+                "source": "https://github.com/Alexander1000/service-session-client/tree/0.1.0",
+                "issues": "https://github.com/Alexander1000/service-session-client/issues"
+            },
+            "time": "2019-05-26T12:28:14+00:00"
+        },
         {
             "name": "google/protobuf",
             "version": "v3.7.1",
@@ -1473,17 +1513,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.9",
+            "version": "7.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160"
+                "reference": "64cb33f5b520da490a7b13149d39b43cf3c890c6"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/phpunit/phpunit/phpunit-phpunit-134669cf0eeac3f79bc7f0c793efbc158bffc160-zip-4c9f2f.tar",
-                "reference": "134669cf0eeac3f79bc7f0c793efbc158bffc160",
-                "shasum": "6221ed60088f0b9954fc3fb18a1fd35553d3a4e5"
+                "url": "http://packages.beauty-recommend.ru/dist/phpunit/phpunit/phpunit-phpunit-64cb33f5b520da490a7b13149d39b43cf3c890c6-zip-6eebc6.tar",
+                "reference": "64cb33f5b520da490a7b13149d39b43cf3c890c6",
+                "shasum": "d654fe30f0bfe88e7359e380f147fa0a7ecc79fd"
             },
             "require": {
                 "doctrine/instantiator": "^1.1",
@@ -1565,9 +1605,9 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/7.5.9"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/7.5.11"
             },
-            "time": "2019-04-19T15:50:46+00:00"
+            "time": "2019-05-14T04:53:02+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
