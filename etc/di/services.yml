@@ -24,3 +24,7 @@ services:
     arguments:
       $target: '%service.session.hostname%'
       $args: '%service.session.opts%'
+
+  Session:
+    class: 'Session'
+    autowire: true
