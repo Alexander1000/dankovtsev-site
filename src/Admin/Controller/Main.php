@@ -24,6 +24,7 @@ class Main extends AbstractController
     public function indexAction(): Beauty\Http\ResponseInterface
     {
         $context = [
+            'sessId' => '',
             'userId' => 0,
             'accessToken' => '',
             'refreshToken' => '',
@@ -31,6 +32,7 @@ class Main extends AbstractController
 
         try {
             $sessionData = $this->session->getData();
+            $context['sessId'] = $sessionData->getId();
             $context['userId'] = $sessionData->getUserId();
             $context['accessToken'] = $sessionData->getAccessToken();
             $context['refreshToken'] = $sessionData->getRefreshToken();
