@@ -77,7 +77,7 @@ class Session
                 $sessId = $result->getSessid();
 
                 if ($sessId) {
-                    $this->request->getCookie()->set(self::SESSION_ID_COOKIE_NAME, $this->id);
+                    $this->request->getCookie()->set(self::SESSION_ID_COOKIE_NAME, $sessId);
                     $this->id = $sessId;
                 }
             }
