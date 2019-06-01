@@ -51,7 +51,7 @@ class Session
                 $result->getRefreshToken()
             );
         }
-        
+
         return $this->data;
     }
 
@@ -61,15 +61,23 @@ class Session
     private function getId(): string
     {
         if ($this->id === null) {
-            $call = $this->sessionClient->Create(
-                new \Session\CreateRequest()
-            );
-            $response = $call->wait();
-            // todo: validate
-            $result = $response[0];
+            $this->id = $this->request->getCookie()->get(self::SESSION_ID_COOKIE_NAME);
 
-            /** @var \Session\CreateResponse $result */
-            $this->id = $result->getSessid();
+            if (!$this->id) {
+                $call = $this->sessionClient->Create(
+                    new \Session\CreateRequest()
+                );
+                $response = $call->wait();
+                // todo: validate
+                $result = $response[0];
+
+                /** @var \Session\CreateResponse $result */
+                $this->id = $result->getSessid();
+
+                if ($this->id) {
+                    $this->request->getCookie()->set(self::SESSION_ID_COOKIE_NAME, $this->id);
+                }
+            }
         }
 
         return $this->id;
