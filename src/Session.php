@@ -61,9 +61,11 @@ class Session
     private function getId(): string
     {
         if ($this->id === null) {
-            $this->id = $this->request->getCookie()->get(self::SESSION_ID_COOKIE_NAME);
+            $sessId = $this->request->getCookie()->get(self::SESSION_ID_COOKIE_NAME);
 
-            if (!$this->id) {
+            if ($sessId) {
+                $this->id = $sessId;
+            } else {
                 $call = $this->sessionClient->Create(
                     new \Session\CreateRequest()
                 );
@@ -72,10 +74,11 @@ class Session
                 $result = $response[0];
 
                 /** @var \Session\CreateResponse $result */
-                $this->id = $result->getSessid();
+                $sessId = $result->getSessid();
 
-                if ($this->id) {
+                if ($sessId) {
                     $this->request->getCookie()->set(self::SESSION_ID_COOKIE_NAME, $this->id);
+                    $this->id = $sessId;
                 }
             }
         }
