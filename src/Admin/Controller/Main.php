@@ -8,14 +8,14 @@ use Beauty\Request;
 class Main extends AbstractController
 {
     /**
-     * @var \Session\SessionServiceClient
+     * @var \Session
      */
-    private $sessionService;
+    private $session;
 
-    public function __construct(Request $request, \Session\SessionServiceClient $sessionService)
+    public function __construct(Request $request, \Session $session)
     {
         parent::__construct($request);
-        $this->sessionService = $sessionService;
+        $this->session = $session;
     }
 
     /**
@@ -30,22 +30,14 @@ class Main extends AbstractController
         ];
 
         try {
-            $response = $this->sessionService->Get(
-                (new \Session\GetRequest())
-                    ->setSessid('some-value')
-            );
-            if ($response) {
-                $result = $response->wait();
-                $getResponse = $result[0];
-                if ($getResponse instanceof \Session\GetResponse) {
-                    $context['userId'] = $getResponse->getUserId();
-                    $context['accessToken'] = $getResponse->getAccessToken();
-                    $context['refreshToken'] = $getResponse->getRefreshToken();
-                }
-            }
+            $sessionData = $this->session->getData();
+            $context['userId'] = $sessionData->getUserId();
+            $context['accessToken'] = $sessionData->getAccessToken();
+            $context['refreshToken'] = $sessionData->getRefreshToken();
         } catch (\Throwable $e) {
             var_dump($e);
         }
+
         return $this->render('index', $context);
     }
 }

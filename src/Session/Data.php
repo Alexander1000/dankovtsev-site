@@ -37,4 +37,36 @@ class Data
         $this->accessToken = $accessToken;
         $this->refreshToken = $refreshToken;
     }
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserId(): int
+    {
+        return $this->userId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAccessToken(): string
+    {
+        return $this->accessToken;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRefreshToken(): string
+    {
+        return $this->refreshToken;
+    }
 }
