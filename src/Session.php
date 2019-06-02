@@ -32,6 +32,9 @@ class Session
         $this->sessionClient = $sessionClient;
     }
 
+    /**
+     * @return \Session\Data
+     */
     public function getData(): Session\Data
     {
         if ($this->data === null) {
@@ -53,6 +56,20 @@ class Session
         }
 
         return $this->data;
+    }
+
+    /**
+     * @param \Session\Data $sessionData
+     */
+    public function save(Session\Data $sessionData)
+    {
+        $this->sessionClient->Save(
+            (new \Session\SaveRequest())
+                ->setSessid($sessionData->getId())
+                ->setUserId($sessionData->getUserId())
+                ->setAccessToken($sessionData->getAccessToken())
+                ->setRefreshToken($sessionData->getRefreshToken())
+        );
     }
 
     /**
