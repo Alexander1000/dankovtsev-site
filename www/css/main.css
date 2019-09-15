@@ -18,15 +18,21 @@
 }
 
 .wrap_head .head {
-
+    width: 100%;
 }
 
 .wrap_head .head .menu {
-
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
 }
 
 .wrap_head .head .menu li {
-
+    display: list-item;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .wrap_head .head .menu li a {
