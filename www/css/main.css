@@ -42,6 +42,7 @@
 .wrap_head .head .menu li:hover {
     background: #ffb10069;
     border-bottom: 3px solid #965a2f78;
+    padding-bottom: 2px;
 }
 
 .wrap_head .head .menu li a {
