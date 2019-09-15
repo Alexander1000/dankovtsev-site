@@ -1,5 +1,9 @@
 # Changelog dankovtsev.pro
 
+## 2019-09-15
+### Added
+  - add css styles for main menu
+
 ## 2019-06-02
 ### Changed
   - Добавлен метод сохранения сессии
