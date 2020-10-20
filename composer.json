@@ -12,7 +12,7 @@
   },
   "repositories": [
     { "packagist": false },
-    { "type": "composer", "url": "http://packages.beauty-recommend.ru" }
+    { "type": "composer", "url": "http://packages.dankovtsev.pro" }
   ],
   "minimum-stability": "dev",
   "require": {
