@@ -23,10 +23,10 @@
 
     "Alexander1000/service-session-client": "0.1.0",
 
-    "symfony/dependency-injection": "v4.0.4",
-    "symfony/yaml": "v4.0.4",
-    "symfony/config": "v4.0.4",
-    "symfony/filesystem": "v4.0.4",
+    "symfony/dependency-injection": "^5.0",
+    "symfony/yaml": "^5.0",
+    "symfony/config": "^5.0",
+    "symfony/filesystem": "^5.0",
     "symfony/polyfill-ctype": "^1.18",
 
     "psr/log": "~1.0",
