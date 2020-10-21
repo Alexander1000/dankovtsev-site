@@ -16,10 +16,10 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=7.1",
+    "php": ">=8.0",
     "ext-yaml": "*",
     "phing/phing": "^2.16",
-    "twig/twig": "2.4.4",
+    "twig/twig": "^3.0",
 
     "Alexander1000/service-session-client": "0.1.0",
 
@@ -27,6 +27,7 @@
     "symfony/yaml": "v4.0.4",
     "symfony/config": "v4.0.4",
     "symfony/filesystem": "v4.0.4",
+    "symfony/polyfill-ctype": "^1.18",
 
     "psr/log": "~1.0",
     "psr/http-message": "~1.0",

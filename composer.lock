@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6ce41f59d59a45267847572dc0cbf4b",
+    "content-hash": "602276aaa8d1bc6f1c8c5ffcf99333b7",
     "packages": [
         {
             "name": "Alexander1000/service-session-client",
@@ -570,6 +570,70 @@
             "time": "2018-01-03T07:38:00+00:00"
         },
         {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.18.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "http://packages.beauty-recommend.ru/dist/symfony/polyfill-ctype/symfony-polyfill-ctype-1c302646f6efc070cd46856e600e5e0684d6b454-zip-a7a7e9.tar",
+                "reference": "1c302646f6efc070cd46856e600e5e0684d6b454",
+                "shasum": "d6af2412a1957fce35ec3fcda1fa5e841f90e478"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.18.1"
+            },
+            "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.18.1",
             "source": {
@@ -696,44 +760,41 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
+                "reference": "9b76b1535483cdf4edf01bb787b0217b62bd68a5"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/twig/twig/twig-twig-eddb97148ad779f27e670e1e3f19fb323aedafeb-zip-5d92eb.tar",
-                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
-                "shasum": "fbe4ed3c72e0d734d6b14b3522ad036dfec8f38c"
+                "url": "http://packages.beauty-recommend.ru/dist/twig/twig/twig-twig-9b76b1535483cdf4edf01bb787b0217b62bd68a5-zip-d77e07.tar",
+                "reference": "9b76b1535483cdf4edf01bb787b0217b62bd68a5",
+                "shasum": "a541c451762f424bc7b490a569838fa1f998b5f3"
             },
             "require": {
-                "php": "^7.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": ">=7.2.5",
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.3@dev"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Twig_": "lib/"
-                },
                 "psr-4": {
                     "Twig\\": "src/"
                 }
             },
             "autoload-dev": {
-                "psr-0": {
-                    "Twig_Tests_": "test/"
+                "psr-4": {
+                    "Twig\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -748,7 +809,6 @@
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "http://twig.sensiolabs.org/contributors",
                     "role": "Contributors"
                 },
                 {
@@ -758,16 +818,15 @@
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "http://twig.sensiolabs.org",
+            "homepage": "https://twig.symfony.com",
             "keywords": [
                 "templating"
             ],
             "support": {
-                "forum": "https://groups.google.com/forum/#!forum/twig-users",
-                "source": "https://github.com/twigphp/Twig/tree/v2.4.4",
+                "source": "https://github.com/twigphp/Twig/tree/v3.0.5",
                 "issues": "https://github.com/twigphp/Twig/issues"
             },
-            "time": "2017-09-27T18:10:31+00:00"
+            "time": "2020-08-05T15:13:19+00:00"
         }
     ],
     "packages-dev": [
@@ -1056,28 +1115,27 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.1.0",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
+                "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/phpdocumentor/reflection-docblock/phpdocumentor-reflection-docblock-cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e-zip-f79ac8.tar",
-                "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
-                "shasum": "2670f0f63f94db841258028f1f72123e8ac476df"
+                "url": "http://packages.beauty-recommend.ru/dist/phpdocumentor/reflection-docblock/phpdocumentor-reflection-docblock-069a785b2141f5bcf49f3e353548dc1cce6df556-zip-d9fc00.tar",
+                "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556",
+                "shasum": "d6ac07f6bb634ed174ea389ee40e076c964bd464"
             },
             "require": {
-                "ext-filter": "^7.1",
-                "php": "^7.2",
-                "phpdocumentor/reflection-common": "^2.0",
-                "phpdocumentor/type-resolver": "^1.0",
-                "webmozart/assert": "^1"
+                "ext-filter": "*",
+                "php": "^7.2 || ^8.0",
+                "phpdocumentor/reflection-common": "^2.2",
+                "phpdocumentor/type-resolver": "^1.3",
+                "webmozart/assert": "^1.9.1"
             },
             "require-dev": {
-                "doctrine/instantiator": "^1",
-                "mockery/mockery": "^1"
+                "mockery/mockery": "~1.3.2"
             },
             "type": "library",
             "extra": {
@@ -1110,10 +1168,10 @@
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.1.0",
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.2.2",
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues"
             },
-            "time": "2020-02-22T12:28:44+00:00"
+            "time": "2020-09-03T19:13:55+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -1173,28 +1231,28 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.11.1",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "b20034be5efcdab4fb60ca3a29cba2949aead160"
+                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/phpspec/prophecy/phpspec-prophecy-b20034be5efcdab4fb60ca3a29cba2949aead160-zip-ec362f.tar",
-                "reference": "b20034be5efcdab4fb60ca3a29cba2949aead160",
-                "shasum": "dbc85bf337b269130f5acc0f12af8ab8a4459e0b"
+                "url": "http://packages.beauty-recommend.ru/dist/phpspec/prophecy/phpspec-prophecy-8ce87516be71aae9b956f81906aaf0338e0d8a2d-zip-d283af.tar",
+                "reference": "8ce87516be71aae9b956f81906aaf0338e0d8a2d",
+                "shasum": "0f56bc562b3a905ea652826e9a20424cecd95946"
             },
             "require": {
                 "doctrine/instantiator": "^1.2",
-                "php": "^7.2",
-                "phpdocumentor/reflection-docblock": "^5.0",
+                "php": "^7.2 || ~8.0, <8.1",
+                "phpdocumentor/reflection-docblock": "^5.2",
                 "sebastian/comparator": "^3.0 || ^4.0",
                 "sebastian/recursion-context": "^3.0 || ^4.0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^6.0",
-                "phpunit/phpunit": "^8.0"
+                "phpunit/phpunit": "^8.0 || ^9.0 <9.3"
             },
             "type": "library",
             "extra": {
@@ -1237,10 +1295,10 @@
                 "Stub"
             ],
             "support": {
-                "source": "https://github.com/phpspec/prophecy/tree/1.11.1",
+                "source": "https://github.com/phpspec/prophecy/tree/1.12.1",
                 "issues": "https://github.com/phpspec/prophecy/issues"
             },
-            "time": "2020-07-08T12:44:21+00:00"
+            "time": "2020-09-29T09:10:42+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2280,31 +2338,30 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.3.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/webmozart/assert/webmozart-assert-0df1908962e7a3071564e857d86874dad1ef204a-zip-a286c0.tar",
-                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
-                "shasum": "63c40477b989708cd6c210935e003d48d1e1e90f"
+                "url": "http://packages.beauty-recommend.ru/dist/webmozart/assert/webmozart-assert-bafc69caeb4d49c39fd0779086c03a3738cbb389-zip-421c7f.tar",
+                "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "shasum": "e3ab1074828488b77636c32e4813e1b24344ce23"
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^5.3.3 || ^7.0 || ^8.0",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "phpstan/phpstan": "<0.12.20",
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
+                "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -2312,7 +2369,8 @@
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Webmozart\\Assert\\Tests\\": "tests/"
+                    "Webmozart\\Assert\\Tests\\": "tests/",
+                    "Webmozart\\Assert\\Bin\\": "bin/src"
                 }
             },
             "license": [
@@ -2331,10 +2389,10 @@
                 "validate"
             ],
             "support": {
-                "source": "https://github.com/webmozart/assert/tree/1.3.0",
+                "source": "https://github.com/webmozart/assert/tree/1.9.1",
                 "issues": "https://github.com/webmozart/assert/issues"
             },
-            "time": "2018-01-29T19:49:41+00:00"
+            "time": "2020-07-08T17:02:28+00:00"
         }
     ],
     "aliases": [],
@@ -2343,7 +2401,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1",
+        "php": ">=8.0",
         "ext-yaml": "*"
     },
     "platform-dev": []
