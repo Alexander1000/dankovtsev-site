@@ -18,7 +18,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/alexander1000/service-session-client/alexander1000-service-session-client-40a107f4b4d0c8616bcb0aa71169d7d18c083c69-zip-54f535.tar",
                 "reference": "40a107f4b4d0c8616bcb0aa71169d7d18c083c69",
-                "shasum": "61244a17f71733d019804fab2caed3d4043f57ee"
+                "shasum": "8b356da7f477df45489a1554bbb99cb906305fd3"
             },
             "require": {
                 "ext-json": "*",
@@ -58,7 +58,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/google/protobuf/google-protobuf-0657d28864692480c3d8506ba4fc90e8813deae5-zip-ea6f55.tar",
                 "reference": "0657d28864692480c3d8506ba4fc90e8813deae5",
-                "shasum": "c669675d9219ad6f2e5cc32759c6e5dcbebca973"
+                "shasum": "4dd7282b47456697d4aacc7985cb538647f39ff6"
             },
             "require": {
                 "php": ">=5.5.0"
@@ -102,7 +102,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/grpc/grpc/grpc-grpc-0f1ffdde45bfb9257c5d9eab81695d0f042bea22-zip-de2c7e.tar",
                 "reference": "0f1ffdde45bfb9257c5d9eab81695d0f042bea22",
-                "shasum": "0629df90744f82be95cbd22b3ecfbf8e523c8475"
+                "shasum": "33176e5f8f2ee04167ffdced3c709228a71bdf76"
             },
             "require": {
                 "php": ">=5.5.0"
@@ -242,7 +242,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/psr/container/psr-container-b7ce3b176482dbbc1245ebf52b181af44c2cf55f-zip-34fef8.tar",
                 "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "shasum": "f5dedf969ca398d053cb47fff0e146cbb6d005fb"
+                "shasum": "5726721820ad96b5ac6366f2b228fd2afc4263ea"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -294,7 +294,7 @@
                 "type": "tar",
                 "url": "http://packages.beauty-recommend.ru/dist/psr/http-message/psr-http-message-f6561bf28d520154e4b0ec72be95418abe6d9363-zip-7ab320.tar",
                 "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": "7346dc13b2b9771e136242510c789e0f2cf8161f"
+                "shasum": "51d24983eb9b4729f8ab1ebd917364b34edfe33b"
             },
             "require": {
                 "php": ">=5.3.0"
