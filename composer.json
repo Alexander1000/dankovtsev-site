@@ -1,5 +1,5 @@
 {
-  "name": "Alexander1000/dankovtsev-site",
+  "name": "alexander1000/dankovtsev-site",
   "description": "dankovtsev.pro",
   "authors": [
     {
@@ -21,7 +21,7 @@
     "phing/phing": "^2.16",
     "twig/twig": "^3.0",
 
-    "Alexander1000/service-session-client": "0.1.0",
+    "alexander1000/service-session-client": "0.1.0",
 
     "symfony/dependency-injection": "^5.0",
     "symfony/yaml": "^5.0",
