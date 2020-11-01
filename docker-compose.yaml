@@ -19,3 +19,5 @@ services:
       - type: bind
         source: ./www/css
         target: /home/www-data/dankovtsev.pro/release/www/css
+    extra_hosts:
+      core.dankovtsev.pro: "81.163.28.190" # @todo: hard code, fix with dns resolving
