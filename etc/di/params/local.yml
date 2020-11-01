@@ -1,0 +1,4 @@
+parameters:
+
+  service.session.hostname: core.dankovtsev.pro:8889
+  service.session.opts: []

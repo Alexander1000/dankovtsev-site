@@ -9,3 +9,10 @@ docker-compose up
 ```shell
 docker-compose exec backend bash
 ```
+
+## Build code for local development:
+```shell
+composer install
+./vendor/bin/phing build -Denv=local
+kill -HUP 1
+```
