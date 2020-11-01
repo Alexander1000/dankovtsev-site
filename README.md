@@ -7,5 +7,5 @@ docker-compose up
 
 ## Exec in running container
 ```shell
-docker-compose exec php bash
+docker-compose exec backend bash
 ```

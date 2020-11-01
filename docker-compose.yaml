@@ -1,17 +1,19 @@
 version: "3.8"
 services:
-  php:
+  backend:
     image: dankovtsev.pro:5000/utils/php
     volumes:
       - type: bind
         source: .
         target: /home/www-data/dankovtsev.pro/release
+    networks:
+      - backend
   nginx:
     image: dankovtsev.pro:5000/utils/nginx
     ports:
       - "8080:80"
-    links:
-      - "php:backend"
+    networks:
+      - backend
     volumes:
       - type: bind
         source: ./templates/errors
@@ -21,3 +23,6 @@ services:
         target: /home/www-data/dankovtsev.pro/release/www/css
     extra_hosts:
       core.dankovtsev.pro: "81.163.28.190" # @todo: hard code, fix with dns resolving
+networks:
+  backend:
+    driver: bridge
