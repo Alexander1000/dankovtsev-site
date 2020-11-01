@@ -16,3 +16,6 @@ services:
       - type: bind
         source: ./templates/errors
         target: /home/www-data/dankovtsev.pro/release/templates/errors
+      - type: bind
+        source: ./www/css
+        target: /home/www-data/dankovtsev.pro/release/www/css
