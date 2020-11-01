@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  php:
+    image: dankovtsev.pro:5000/utils/php
+  nginx:
+    image: dankovtsev.pro:5000/utils/nginx
