@@ -6,3 +6,5 @@ services:
     image: dankovtsev.pro:5000/utils/nginx
     ports:
       - "8080:80"
+    links:
+      - "php:backend"
