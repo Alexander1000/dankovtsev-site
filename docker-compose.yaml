@@ -4,3 +4,5 @@ services:
     image: dankovtsev.pro:5000/utils/php
   nginx:
     image: dankovtsev.pro:5000/utils/nginx
+    ports:
+      - "8080:80"
