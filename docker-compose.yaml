@@ -2,6 +2,10 @@ version: "3.8"
 services:
   php:
     image: dankovtsev.pro:5000/utils/php
+    volumes:
+      - type: bind
+        source: .
+        target: /home/www-data/dankovtsev.pro/release
   nginx:
     image: dankovtsev.pro:5000/utils/nginx
     ports:
