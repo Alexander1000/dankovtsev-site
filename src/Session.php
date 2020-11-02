@@ -63,13 +63,14 @@ class Session
      */
     public function save(Session\Data $sessionData)
     {
-        $this->sessionClient->Save(
+        $call = $this->sessionClient->Save(
             (new \Session\SaveRequest())
                 ->setSessid($sessionData->getId())
                 ->setUserId($sessionData->getUserId())
                 ->setAccessToken($sessionData->getAccessToken())
                 ->setRefreshToken($sessionData->getRefreshToken())
         );
+        $call->wait();
     }
 
     /**
