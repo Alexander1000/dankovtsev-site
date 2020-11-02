@@ -17,3 +17,8 @@ auth_register:
   uri: /registration
   controller: Auth\Controller\Register
   action: register
+
+auth_logout:
+  uri: /logout
+  controller: Auth\Controller\Logout
+  action: logout

@@ -18,3 +18,7 @@ services:
   Auth\Controller\Register:
     autowire: true
     public: true
+
+  Auth\Controller\Logout:
+    autowire: true
+    public: true
