@@ -15,7 +15,7 @@ class Logout extends ControllerAbstract
     {
         $sessData = $this->session->getData();
         if ($sessData->getUserId() == 0) {
-            return $this->redirect('/', 301);
+            return $this->redirect('/', 302);
         }
 
         return $this->render('index');
