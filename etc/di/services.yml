@@ -53,3 +53,6 @@ services:
           $host: '%service.auth.host%'
           $headers: '%service.auth.headers%'
           $options: '%service.auth.options%'
+
+  Auth\Repository:
+    autowire: true
