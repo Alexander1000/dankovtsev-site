@@ -30,7 +30,17 @@ class Register extends ControllerAbstract
 
             $request = new Users\Request\V1\Save\User(null, null, null, [$email], []);
 
-            $response = $this->userClient->save($request);
+            $user = $this->userClient->save($request);
+
+            $emailData = $user->getEmails()[0];
+
+            $reqAuthRegister = new Auth\Request\V1\Registration(
+                $user->getUserId(),
+                $this->request->getParam('password'),
+                [new Auth\Model\Credential($emailData->getId(), 'email')]
+            );
+
+            $result = $this->authClient->registration($reqAuthRegister);
         }
 
         return $this->render('auth/register');
