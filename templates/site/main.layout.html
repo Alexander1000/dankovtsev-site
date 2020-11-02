@@ -7,9 +7,9 @@
 {% block content_head %}
 <div class="head">
     <ul class="menu">
-        <li><a href="/">Главная</a></li>
-        <li>История проектов (blog)</li>
-        <li>Мои работы</li>
+        {% for item in menuItems %}
+        <li>{% if item.link %}<a href="{{ item.link }}">{% endif %}{{ item.title }}{% if item.link %}</a>{% endif %}</li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}

@@ -2,15 +2,6 @@
 
 namespace Auth\Controller;
 
-use Beauty;
-
-abstract class ControllerAbstract extends Beauty\Controller\Web
+abstract class ControllerAbstract extends \Controller\PublicAbstract
 {
-    /**
-     * @return string
-     */
-    public function getTheme(): string
-    {
-        return 'site';
-    }
 }

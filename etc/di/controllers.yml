@@ -1,9 +1,11 @@
 services:
+  Controller\PublicAbstract:
+    autowire: true
+
   Controller\Site:
-    class: 'Controller\Site'
+    parent: Controller\PublicAbstract
+    autowire: true
     public: true
-    arguments:
-      $request: '@Beauty\Request'
 
   Admin\Controller\Main:
     autowire: true

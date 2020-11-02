@@ -4,7 +4,7 @@ namespace Controller;
 
 use Beauty;
 
-class Site extends Beauty\Controller\Web
+class Site extends PublicAbstract
 {
     /**
      * @return Beauty\Http\ResponseInterface
@@ -12,13 +12,5 @@ class Site extends Beauty\Controller\Web
     public function indexAction(): Beauty\Http\ResponseInterface
     {
         return $this->render('index');
-    }
-
-    /**
-     * @return string
-     */
-    public function getTheme(): string
-    {
-        return 'site';
     }
 }
