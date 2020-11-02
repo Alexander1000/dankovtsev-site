@@ -42,3 +42,14 @@ services:
           $host: '%service.users.host%'
           $headers: '%service.users.headers%'
           $options: '%service.users.options%'
+
+  Alexander1000\Clients\Auth\Client:
+    autowire: true
+    arguments:
+      $requestBuilder:
+        !service
+        class: 'NetworkTransport\Http\Request\Builder'
+        arguments:
+          $host: '%service.auth.host%'
+          $headers: '%service.auth.headers%'
+          $options: '%service.auth.options%'

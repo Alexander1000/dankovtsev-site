@@ -4,3 +4,5 @@ parameters:
   service.session.opts: []
 
   service.users.host: http://core.dankovtsev.pro:8888/service-users
+
+  service.auth.host: http://core.dankovtsev.pro:8888/service-auth

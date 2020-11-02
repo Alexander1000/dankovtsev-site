@@ -9,3 +9,8 @@ parameters:
   service.users.options:
     timeoutMs: 5000
 
+  service.auth.host: http://127.0.0.1:8888/service-auth
+  service.auth.headers:
+    Content-Type: application/json
+  service.auth.options:
+    timeoutMs: 5000
