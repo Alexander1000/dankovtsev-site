@@ -13,6 +13,11 @@ class Logout extends ControllerAbstract
      */
     public function logoutAction(): Beauty\Http\ResponseInterface
     {
+        $sessData = $this->session->getData();
+        if ($sessData->getUserId() == 0) {
+            return $this->redirect('/', 301);
+        }
+
         return $this->render('index');
     }
 }
