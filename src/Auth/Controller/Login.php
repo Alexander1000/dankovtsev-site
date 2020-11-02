@@ -13,11 +13,18 @@ class Login extends ControllerAbstract
 
     private Auth\Client $authClient;
 
-    public function __construct(Request $request, Users\Client $userClient, Auth\Client $authClient)
-    {
+    private \Session $session;
+
+    public function __construct(
+        Request $request,
+        Users\Client $userClient,
+        Auth\Client $authClient,
+        \Session $session
+    ) {
         parent::__construct($request);
         $this->userClient = $userClient;
         $this->authClient = $authClient;
+        $this->session = $session;
     }
 
     /**
@@ -34,7 +41,13 @@ class Login extends ControllerAbstract
             );
             $token = $this->authClient->authenticate($reqAuthenticate);
 
-            // @todo: save in session
+            $sessData = $this->session->getData();
+            $sessData
+                ->setUserId($user->getUserId())
+                ->setAccessToken($token->getAccess())
+                ->setRefreshToken($token->getRefresh());
+
+            $this->session->save($sessData);
         }
         return $this->render('auth/login');
     }

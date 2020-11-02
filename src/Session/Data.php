@@ -6,25 +6,13 @@ namespace Session;
 
 class Data
 {
-    /**
-     * @var string
-     */
-    private $id;
+    private string $id;
 
-    /**
-     * @var int
-     */
-    private $userId;
+    private int $userId;
 
-    /**
-     * @var string
-     */
-    private $accessToken;
+    private string $accessToken;
 
-    /**
-     * @var string
-     */
-    private $refreshToken;
+    private string $refreshToken;
 
     public function __construct(
         string $id,
@@ -55,6 +43,16 @@ class Data
     }
 
     /**
+     * @param int $userId
+     * @return $this
+     */
+    public function setUserId(int $userId)
+    {
+        $this->userId = $userId;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getAccessToken(): string
@@ -63,10 +61,30 @@ class Data
     }
 
     /**
+     * @param string $accessToken
+     * @return $this
+     */
+    public function setAccessToken(string $accessToken)
+    {
+        $this->accessToken = $accessToken;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getRefreshToken(): string
     {
         return $this->refreshToken;
+    }
+
+    /**
+     * @param string $refreshToken
+     * @return $this
+     */
+    public function setRefreshToken(string $refreshToken)
+    {
+        $this->refreshToken = $refreshToken;
+        return $this;
     }
 }
