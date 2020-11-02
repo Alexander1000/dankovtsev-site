@@ -28,3 +28,17 @@ services:
   Session:
     class: 'Session'
     autowire: true
+
+  NetworkTransport\Http\Transport:
+    autowire: true
+
+  Alexander1000\Clients\Users\Client:
+    autowire: true
+    arguments:
+      $requestBuilder:
+        !service
+        class: 'NetworkTransport\Http\Request\Builder'
+        arguments:
+          $host: '%service.users.host%'
+          $headers: '%service.users.headers%'
+          $options: '%service.users.options%'

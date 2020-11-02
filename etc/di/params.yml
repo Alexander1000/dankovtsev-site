@@ -2,3 +2,10 @@ parameters:
 
   service.session.hostname: 127.0.0.1:50051
   service.session.opts: []
+
+  service.users.host: http://127.0.0.1:8888/service-users
+  service.users.headers:
+    Content-Type: application/json
+  service.users.options:
+    timeoutMs: 5000
+
