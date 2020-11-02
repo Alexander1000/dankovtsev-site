@@ -3,29 +3,18 @@
 namespace Controller;
 
 use Beauty;
-use Session;
-use Alexander1000\Clients\Users;
-use Alexander1000\Clients\Auth;
 use Beauty\Request;
 
 abstract class PublicAbstract extends Beauty\Controller\Web
 {
-    protected Session $session;
-
-    protected Users\Client $userClient;
-
-    protected Auth\Client $authClient;
+    protected \Auth\Repository $authRepository;
 
     public function __construct(
         Request $request,
-        Session $session,
-        Users\Client $userClient,
-        Auth\Client $authClient
+        \Auth\Repository $authRepository
     ) {
         parent::__construct($request);
-        $this->session = $session;
-        $this->userClient = $userClient;
-        $this->authClient = $authClient;
+        $this->authRepository = $authRepository;
     }
 
     /**
@@ -63,11 +52,10 @@ abstract class PublicAbstract extends Beauty\Controller\Web
             ]
         ];
 
-        $sessData = $this->session->getData();
-        if ($sessData->getUserId() > 0) {
-            $user = $this->userClient->getById($sessData->getUserId());
+        $curUser = $this->authRepository->getCurrentUser();
+        if ($curUser !== null) {
             $data[] = [
-                'title' => 'Выход (' . $user->getEmails()[0]->getEmail() . ')',
+                'title' => 'Выход (' . $curUser->getEmails()[0]->getEmail() . ')',
                 'link' => '/logout'
             ];
         }
