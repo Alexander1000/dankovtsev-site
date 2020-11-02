@@ -50,7 +50,7 @@ abstract class PublicAbstract extends Beauty\Controller\Web
      */
     protected function getMenuItems(): array
     {
-        return [
+        $data = [
             [
                 'title' => 'Главная',
                 'link' => '/'
@@ -62,5 +62,16 @@ abstract class PublicAbstract extends Beauty\Controller\Web
                 'title' => 'Мои работы'
             ]
         ];
+
+        $sessData = $this->session->getData();
+        if ($sessData->getUserId() > 0) {
+            $user = $this->userClient->getById($sessData->getUserId());
+            $data[] = [
+                'title' => 'Выход (' . $user->getEmails()[0]->getEmail() . ')',
+                'link' => '/logout'
+            ];
+        }
+
+        return $data;
     }
 }
