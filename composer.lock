@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab000900ba4b9defe577e382ab324a36",
+    "content-hash": "baf916ed3071bd483e3fce8186170fc2",
     "packages": [
         {
             "name": "Alexander1000/network-transport",
@@ -81,44 +81,6 @@
             "time": "2019-03-31T08:11:08+00:00"
         },
         {
-            "name": "Alexander1000/service-users-client",
-            "version": "0.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Alexander1000/service-users-client.git",
-                "reference": "6c6bc9355978e3e3f1fc6d185af3b8e6769361a1"
-            },
-            "dist": {
-                "type": "tar",
-                "url": "http://packages.dankovtsev.pro/dist/alexander1000/service-users-client/alexander1000-service-users-client-6c6bc9355978e3e3f1fc6d185af3b8e6769361a1-zip-a44f6a.tar",
-                "reference": "6c6bc9355978e3e3f1fc6d185af3b8e6769361a1",
-                "shasum": "924ebc0414deeab939667bee0be68357f3bd9089"
-            },
-            "require": {
-                "alexander1000/network-transport": "~2.0",
-                "ext-json": "*",
-                "php": ">=7.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Alexander1000\\Clients\\Users\\": "src"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Alexander Dankovtsev",
-                    "email": "a.dankovtsev@mail.ru"
-                }
-            ],
-            "description": "service-users-client",
-            "support": {
-                "source": "https://github.com/Alexander1000/service-users-client/tree/0.0.2",
-                "issues": "https://github.com/Alexander1000/service-users-client/issues"
-            },
-            "time": "2019-03-14T09:35:42+00:00"
-        },
-        {
             "name": "alexander1000/service-session-client",
             "version": "0.1.0",
             "source": {
@@ -157,6 +119,44 @@
                 "issues": "https://github.com/Alexander1000/service-session-client/issues"
             },
             "time": "2019-05-26T12:28:14+00:00"
+        },
+        {
+            "name": "alexander1000/service-users-client",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Alexander1000/service-users-client.git",
+                "reference": "0c2b9dd678b839beb9af1314855acd87184050df"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "http://packages.dankovtsev.pro/dist/alexander1000/service-users-client/alexander1000-service-users-client-0c2b9dd678b839beb9af1314855acd87184050df-zip-a350a8.tar",
+                "reference": "0c2b9dd678b839beb9af1314855acd87184050df",
+                "shasum": "248f74f11598fe67113c56e96e5cdc8de65f82c7"
+            },
+            "require": {
+                "alexander1000/network-transport": "~2.0",
+                "ext-json": "*",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alexander1000\\Clients\\Users\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Alexander Dankovtsev",
+                    "email": "a.dankovtsev@mail.ru"
+                }
+            ],
+            "description": "service-users-client",
+            "support": {
+                "source": "https://github.com/Alexander1000/service-users-client/tree/0.1.0",
+                "issues": "https://github.com/Alexander1000/service-users-client/issues"
+            },
+            "time": "2020-11-02T10:45:47+00:00"
         },
         {
             "name": "google/protobuf",
@@ -1765,23 +1765,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.2",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "229099d7d69fe5044f6e464f669b1fd34f252e8d"
+                "reference": "6b20e2055f7c29b56cb3870b3de7cc463d7add41"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.dankovtsev.pro/dist/phpunit/php-code-coverage/phpunit-php-code-coverage-229099d7d69fe5044f6e464f669b1fd34f252e8d-zip-96dd38.tar",
-                "reference": "229099d7d69fe5044f6e464f669b1fd34f252e8d",
-                "shasum": "940325e837a73428c4b0e9d75f17447f02e34d6c"
+                "url": "http://packages.dankovtsev.pro/dist/phpunit/php-code-coverage/phpunit-php-code-coverage-6b20e2055f7c29b56cb3870b3de7cc463d7add41-zip-c7400f.tar",
+                "reference": "6b20e2055f7c29b56cb3870b3de7cc463d7add41",
+                "shasum": "ffbfcb3bf7238f77f07dc2306d2afa9f623113fa"
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^4.8",
+                "nikic/php-parser": "^4.10.2",
                 "php": ">=7.3",
                 "phpunit/php-file-iterator": "^3.0.3",
                 "phpunit/php-text-template": "^2.0.2",
@@ -1835,7 +1835,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.2"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.3"
             },
             "funding": [
                 {
@@ -1843,7 +1843,7 @@
                     "url": "https://github.com/sebastianbergmann"
                 }
             ],
-            "time": "2020-10-28T06:24:13+00:00"
+            "time": "2020-10-30T10:46:41+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
