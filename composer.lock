@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "238e8c10de74ef4bf6c6e3770d6977d1",
+    "content-hash": "ab000900ba4b9defe577e382ab324a36",
     "packages": [
         {
             "name": "Alexander1000/network-transport",
@@ -41,6 +41,44 @@
                 "issues": "https://github.com/Alexander1000/network-transport/issues"
             },
             "time": "2018-12-10T05:22:10+00:00"
+        },
+        {
+            "name": "Alexander1000/service-auth-client",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Alexander1000/service-auth-client.git",
+                "reference": "5a13db2501d64d987559dad6bec0aea452a334cb"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "http://packages.dankovtsev.pro/dist/alexander1000/service-auth-client/alexander1000-service-auth-client-5a13db2501d64d987559dad6bec0aea452a334cb-zip-8d8969.tar",
+                "reference": "5a13db2501d64d987559dad6bec0aea452a334cb",
+                "shasum": "3bc9610582c991d7710ef4e0e4fe9d0c5e11fed9"
+            },
+            "require": {
+                "alexander1000/network-transport": "~2.0",
+                "ext-json": "*",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alexander1000\\Clients\\Auth\\": "src"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Alexander Dankovtsev",
+                    "email": "a.dankovtsev@mail.ru"
+                }
+            ],
+            "description": "service-auth-client",
+            "support": {
+                "source": "https://github.com/Alexander1000/service-auth-client/tree/0.0.1",
+                "issues": "https://github.com/Alexander1000/service-auth-client/issues"
+            },
+            "time": "2019-03-31T08:11:08+00:00"
         },
         {
             "name": "Alexander1000/service-users-client",

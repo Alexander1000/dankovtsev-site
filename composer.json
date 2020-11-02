@@ -23,6 +23,7 @@
 
     "alexander1000/service-session-client": "0.1.0",
     "alexander1000/service-users-client": "^0.0",
+    "alexander1000/service-auth-client": "^0.0",
 
     "symfony/dependency-injection": "^5.0",
     "symfony/yaml": "^5.0",
