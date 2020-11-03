@@ -58,6 +58,11 @@ abstract class PublicAbstract extends Beauty\Controller\Web
                 'title' => 'Выход (' . $curUser->getEmails()[0]->getEmail() . ')',
                 'link' => '/logout'
             ];
+        } else {
+            $data[] = [
+                'title' => 'Войти',
+                'link' => '/login'
+            ];
         }
 
         return $data;
