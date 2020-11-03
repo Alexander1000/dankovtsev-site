@@ -38,7 +38,7 @@ class Login extends ControllerAbstract
         }
         return $this->render('auth/login');
     }
-    
+
     private function confirmUser(Users\Response\V1\User $user)
     {
         $reqEmails = [];

@@ -14,11 +14,17 @@ class Register extends ControllerAbstract
     public function registerAction(): Beauty\Http\ResponseInterface
     {
         if ($this->request->isPost()) {
-            $email = new Users\Request\V1\Save\Email(null, null, $this->request->getParam('email'));
+            $user = $this->userClient->getByEmail($this->request->getParam('email'));
 
-            $request = new Users\Request\V1\Save\User(null, null, null, [$email], []);
+            if ($user !== null && $user->getStatusId() !== 0) {
+                throw new \InvalidArgumentException('User with email already exists');
+            }
 
-            $user = $this->userClient->save($request);
+            if ($user === null) {
+                $email = new Users\Request\V1\Save\Email(null, null, $this->request->getParam('email'));
+                $request = new Users\Request\V1\Save\User(null, null, null, [$email], []);
+                $user = $this->userClient->save($request);
+            }
 
             $emailData = $user->getEmails()[0];
 
@@ -29,6 +35,9 @@ class Register extends ControllerAbstract
             );
 
             $result = $this->authClient->registration($reqAuthRegister);
+            if ($result) {
+                return $this->redirect('/login', 302);
+            }
         }
 
         return $this->render('auth/register');
