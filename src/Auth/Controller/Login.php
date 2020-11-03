@@ -17,17 +17,7 @@ class Login extends ControllerAbstract
             $user = $this->userClient->getByEmail($this->request->getParam('email'));
 
             if ($user !== null) {
-                $reqAuthenticate = new Auth\Request\V1\Authenticate(
-                    new Auth\Model\Credential($user->getEmails()[0]->getId(), 'email'),
-                    $this->request->getParam('password')
-                );
-
-                $token = null;
-                try {
-                    $token = $this->authClient->authenticate($reqAuthenticate);
-                } catch (Auth\Exception $e) {
-                    $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
-                }
+                $token = $this->authenticateUser($user, $this->request->getParam('password'));
 
                 if ($token !== null) {
                     if ($user->getStatusId() == 0) {
@@ -43,6 +33,8 @@ class Login extends ControllerAbstract
                     $this->session->save($sessData);
 
                     return $this->redirect('/', 302);
+                } else {
+                    $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
                 }
             } else {
                 $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
@@ -53,7 +45,6 @@ class Login extends ControllerAbstract
     }
 
     /**
-     * confirm user
      * @param Users\Response\V1\User $user
      * @throws Users\Exception
      * @throws \NetworkTransport\Http\Exception\MethodNotAllowed
@@ -91,5 +82,27 @@ class Login extends ControllerAbstract
         );
 
         $this->userClient->save($reqUserUpdate);
+    }
+
+    /**
+     * @param Users\Response\V1\User $user
+     * @param string $password
+     * @return Auth\Model\Token|null
+     * @throws \NetworkTransport\Http\Exception\MethodNotAllowed
+     */
+    private function authenticateUser(Users\Response\V1\User $user, string $password): ?Auth\Model\Token
+    {
+        $reqAuthenticate = new Auth\Request\V1\Authenticate(
+            new Auth\Model\Credential($user->getEmails()[0]->getId(), 'email'),
+            $password
+        );
+
+        try {
+            $token = $this->authClient->authenticate($reqAuthenticate);
+        } catch (Auth\Exception $e) {
+            $token = null;
+        }
+
+        return $token;
     }
 }
