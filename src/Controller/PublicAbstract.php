@@ -55,13 +55,17 @@ abstract class PublicAbstract extends Beauty\Controller\Web
         $curUser = $this->authRepository->getCurrentUser();
         if ($curUser !== null) {
             $data[] = [
+                'title' => 'Профиль',
+                'link' => '/profile',
+            ];
+            $data[] = [
                 'title' => 'Выход (' . $curUser->getEmails()[0]->getEmail() . ')',
-                'link' => '/logout'
+                'link' => '/logout',
             ];
         } else {
             $data[] = [
                 'title' => 'Войти',
-                'link' => '/login'
+                'link' => '/login',
             ];
         }
 
