@@ -28,6 +28,8 @@ class Login extends ControllerAbstract
                 ->setRefreshToken($token->getRefresh());
 
             $this->session->save($sessData);
+
+            return $this->redirect('/', 302);
         }
         return $this->render('auth/login');
     }
