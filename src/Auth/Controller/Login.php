@@ -13,35 +13,41 @@ class Login extends ControllerAbstract
      */
     public function loginAction(): Beauty\Http\ResponseInterface
     {
-        if ($this->request->isPost()) {
-            $user = $this->userClient->getByEmail($this->request->getParam('email'));
+        if ($this->request->isGet()) {
+            return $this->render('auth/login');
+        }
 
-            if ($user !== null) {
-                $token = $this->authenticateUser($user, $this->request->getParam('password'));
+        $context = [
+            'form' => $this->request->getParams(),
+        ];
 
-                if ($token !== null) {
-                    if ($user->getStatusId() == 0) {
-                        $this->confirmUser($user);
-                    }
+        $user = $this->userClient->getByEmail($this->request->getParam('email'));
 
-                    $sessData = $this->session->getData();
-                    $sessData
-                        ->setUserId($user->getUserId())
-                        ->setAccessToken($token->getAccess())
-                        ->setRefreshToken($token->getRefresh());
+        if ($user !== null) {
+            $token = $this->authenticateUser($user, $this->request->getParam('password'));
 
-                    $this->session->save($sessData);
-
-                    return $this->redirect('/', 302);
-                } else {
-                    $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
+            if ($token !== null) {
+                if ($user->getStatusId() == 0) {
+                    $this->confirmUser($user);
                 }
+
+                $sessData = $this->session->getData();
+                $sessData
+                    ->setUserId($user->getUserId())
+                    ->setAccessToken($token->getAccess())
+                    ->setRefreshToken($token->getRefresh());
+
+                $this->session->save($sessData);
+
+                return $this->redirect('/', 302);
             } else {
                 $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
             }
+        } else {
+            $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
         }
 
-        return $this->render('auth/login');
+        return $this->render('auth/login', $context);
     }
 
     /**

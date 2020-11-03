@@ -10,7 +10,7 @@
         <form action="" method="post">
             <div class="row">
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email"/>
+                <input type="text" name="email" id="email" {% if form.email %}value="{{ form.email }}"{% endif %}/>
             </div>
 
             <div class="row">
