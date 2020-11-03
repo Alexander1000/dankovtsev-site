@@ -38,7 +38,7 @@ class Login extends ControllerAbstract
                 return $this->redirect('/', 302);
             }
 
-            $this->addAlert('404', 'User not found', self::ALERT_COLOR_RED);
+            $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
         }
 
         return $this->render('auth/login');

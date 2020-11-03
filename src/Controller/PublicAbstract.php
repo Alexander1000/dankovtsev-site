@@ -83,7 +83,7 @@ abstract class PublicAbstract extends Beauty\Controller\Web
         return $data;
     }
 
-    protected function addAlert(string $title, string $text, int $color)
+    protected function addAlert(?string $title, string $text, int $color)
     {
         $this->alerts[] = [
             'title' => $title,
