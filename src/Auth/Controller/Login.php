@@ -21,24 +21,32 @@ class Login extends ControllerAbstract
                     new Auth\Model\Credential($user->getEmails()[0]->getId(), 'email'),
                     $this->request->getParam('password')
                 );
-                $token = $this->authClient->authenticate($reqAuthenticate);
 
-                if ($user->getStatusId() == 0) {
-                    $this->confirmUser($user);
+                $token = null;
+                try {
+                    $token = $this->authClient->authenticate($reqAuthenticate);
+                } catch (Auth\Exception $e) {
+                    $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
                 }
 
-                $sessData = $this->session->getData();
-                $sessData
-                    ->setUserId($user->getUserId())
-                    ->setAccessToken($token->getAccess())
-                    ->setRefreshToken($token->getRefresh());
+                if ($token !== null) {
+                    if ($user->getStatusId() == 0) {
+                        $this->confirmUser($user);
+                    }
 
-                $this->session->save($sessData);
+                    $sessData = $this->session->getData();
+                    $sessData
+                        ->setUserId($user->getUserId())
+                        ->setAccessToken($token->getAccess())
+                        ->setRefreshToken($token->getRefresh());
 
-                return $this->redirect('/', 302);
+                    $this->session->save($sessData);
+
+                    return $this->redirect('/', 302);
+                }
+            } else {
+                $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
             }
-
-            $this->addAlert(null, 'Ошибка аутентификации!', self::ALERT_COLOR_RED);
         }
 
         return $this->render('auth/login');
