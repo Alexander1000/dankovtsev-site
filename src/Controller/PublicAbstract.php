@@ -9,6 +9,16 @@ abstract class PublicAbstract extends Beauty\Controller\Web
 {
     protected \Auth\Repository $authRepository;
 
+    private array $alerts = [];
+
+    protected const ALERT_COLOR_RED = 0;
+    protected const ALERT_COLOR_GREEN = 1;
+
+    protected const ALLERT_CLASS = [
+        self::ALERT_COLOR_RED => 'danger',
+        self::ALERT_COLOR_GREEN => 'success',
+    ];
+
     public function __construct(
         Request $request,
         \Auth\Repository $authRepository
@@ -31,6 +41,7 @@ abstract class PublicAbstract extends Beauty\Controller\Web
     protected function render(string $template, array $context = []): Beauty\Http\ResponseInterface
     {
         $context['menuItems'] = $this->getMenuItems();
+        $context['alerts'] = $this->alerts;
         return parent::render($template, $context);
     }
 
@@ -70,5 +81,14 @@ abstract class PublicAbstract extends Beauty\Controller\Web
         }
 
         return $data;
+    }
+
+    protected function addAlert(string $title, string $text, int $color)
+    {
+        $this->alerts[] = [
+            'title' => $title,
+            'text' => $text,
+            'color' => self::ALLERT_CLASS[$color],
+        ];
     }
 }

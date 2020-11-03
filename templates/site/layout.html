@@ -13,6 +13,19 @@
             {% block content_head %}{% endblock %}
         </div>
         <div class="wrap_content">
+            {% if alerts|length > 0 %}
+            <div class="alert-wrapper">
+                {% for alert in alerts %}
+                <div class="alert alert-{{ alert.color }}" role="alert">
+                    {% if alert.title %}
+                    <h4 class="alert-heading">{{ alert.title }}</h4>
+                    {% endif %}
+                    {{ alert.text }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
             {% block content_body %}{% endblock %}
         </div>
         <div class="wrap_footer">
