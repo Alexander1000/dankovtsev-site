@@ -25,11 +25,11 @@
     "alexander1000/service-users-client": "^0.1",
     "alexander1000/service-auth-client": "^0.0",
 
-    "symfony/dependency-injection": "^5.0",
-    "symfony/yaml": "^5.0",
-    "symfony/config": "^5.0",
-    "symfony/filesystem": "^5.0",
-    "symfony/polyfill-ctype": "^1.18",
+    "symfony/dependency-injection": "^7.2",
+    "symfony/yaml": "^7.2",
+    "symfony/config": "^7.2",
+    "symfony/filesystem": "^7.2",
+    "symfony/polyfill-ctype": "^1.31",
 
     "psr/log": "~1.0",
     "psr/http-message": "~1.0",
