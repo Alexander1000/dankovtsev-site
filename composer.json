@@ -19,7 +19,7 @@
     "php": ">=8.0",
     "ext-yaml": "*",
     "phing/phing": "^2.16",
-    "twig/twig": "^3.0",
+    "twig/twig": "^3.19",
 
     "alexander1000/service-session-client": "0.1.0",
     "alexander1000/service-users-client": "^0.1",
